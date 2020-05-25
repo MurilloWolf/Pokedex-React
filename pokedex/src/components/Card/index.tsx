@@ -49,7 +49,7 @@ const Card: React.FC<IProps> = () => {
 	return (
 		<Styles.Container>
 			<Styles.CardHeader>
-				<h1>{state.selected.name}</h1>
+				<h1 style={{ color: '#555' }}>{state.selected.name}</h1>
 			</Styles.CardHeader>
 			<Styles.CardBody>
 				<Styles.Image src={image || ''} />

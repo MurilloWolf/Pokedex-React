@@ -42,8 +42,17 @@ function App() {
 			<Styles.Container>
 				<Styles.Pokedex>
 					<Styles.Wrapper>
+						<Styles.PokeHeader>
+							<Styles.Circle style={{ alignSelf: 'flex-start' }} />
+
+							<Styles.Circle size={'sm'} bg={'#8fc93a'} />
+							<Styles.Circle size={'sm'} bg={'#efca08'} />
+							<Styles.Circle size={'sm'} bg={'#f90f39'} />
+						</Styles.PokeHeader>
 						<Search changeSelected={handleChange} />
-						<Card />
+						<Styles.visorWrapper>
+							<Card />
+						</Styles.visorWrapper>
 						<p>{contextPoke.state.selected.name}</p>
 					</Styles.Wrapper>
 				</Styles.Pokedex>

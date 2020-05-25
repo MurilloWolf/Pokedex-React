@@ -30,7 +30,8 @@ const Search: React.FC<IProps> = (props) => {
 		const text = event.target.value
 		const { pokemons } = contextPoke.state
 		const pokeCard = pokemons.filter((item) => {
-			return item.name.startsWith(text)
+			if (text == 'mew') return item.name == text
+			else return item.name.startsWith(text)
 		})
 		if (pokeCard.length > 0)
 			props.changeSelected(pokeCard[0].name, pokeCard[0].url)

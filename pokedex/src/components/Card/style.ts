@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-	background: #333;
+	background: #fff;
 	box-shadow: none;
 	border-radius: 4px;
 	width: 100%;
@@ -9,10 +9,12 @@ const Container = styled.div`
 	height: 100vh;
 	max-height: 450px;
 	border: none !important;
-	/* 	transition: transform 0.2s ease;
-	:hover {
-		transform: translate(0, -10px);
-	} */
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 2px 2px 6px #333333;
+	-moz-box-shadow: 2px 2px 6px #333333;
+	-webkit-box-shadow: 2px 2px 6px #333333;
+	/* 	*/
 `
 
 const CardHeader = styled.div`
@@ -20,11 +22,11 @@ const CardHeader = styled.div`
 	height: auto;
 	text-align: center;
 	text-transform: capitalize;
-	margin: 0.5rem;
+	margin: 2rem 0.5rem;
 `
 const CardBody = styled.div`
 	width: 100%;
-	height: 70%;
+	height: 60%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -45,6 +47,10 @@ const Image = styled.img`
 	border: none;
 	border-radius: 5px;
 	width: 50%;
+	transition: transform 0.2s ease;
+	:hover {
+		transform: translate(0, -10px);
+	}
 `
 
 type PokemonType = {
