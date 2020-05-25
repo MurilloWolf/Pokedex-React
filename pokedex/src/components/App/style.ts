@@ -12,7 +12,7 @@ const Pokedex = styled.div`
 	background: #f01;
 	color: #ddd;
 	width: 100%;
-	max-width: 500px;
+	max-width: 568px;
 	height: 100vh;
 	max-height: 812px;
 `

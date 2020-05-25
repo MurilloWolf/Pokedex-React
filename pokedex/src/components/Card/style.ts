@@ -9,18 +9,61 @@ const Container = styled.div`
 	height: 100vh;
 	max-height: 450px;
 	border: none !important;
-	transition: transform 0.2s ease;
+	/* 	transition: transform 0.2s ease;
 	:hover {
 		transform: translate(0, -10px);
-	}
+	} */
+`
+
+const CardHeader = styled.div`
+	width: 100%;
+	height: auto;
+	text-align: center;
+	text-transform: capitalize;
+	margin: 0.5rem;
+`
+const CardBody = styled.div`
+	width: 100%;
+	height: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`
+
+const CardFooter = styled.div`
+	margin: 1.125rem 0;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-flow: row nowrap;
 `
 
 const Image = styled.img`
 	box-shadow: none;
 	border: none;
 	border-radius: 5px;
-	width: 100%;
+	width: 50%;
 `
 
-const Styles = { Container, Image }
+type PokemonType = {
+	background?: string
+}
+
+const Type = styled.div<PokemonType>`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-transform: capitalize;
+	border: none;
+	border-radius: 4px;
+	width: 64px;
+	height: 32px;
+	color: #fff;
+	background: ${(props) => props.background};
+`
+
+const Styles = { Container, Image, CardHeader, CardBody, CardFooter, Type }
 export default Styles
